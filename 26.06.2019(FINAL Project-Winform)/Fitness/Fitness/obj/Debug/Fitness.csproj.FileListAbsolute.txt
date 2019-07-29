@@ -1,0 +1,53 @@
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness\Fitness\bin\Debug\Fitness.exe.config
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness\Fitness\bin\Debug\Fitness.exe
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness\Fitness\bin\Debug\Fitness.pdb
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness\Fitness\obj\Debug\Fitness.csprojAssemblyReference.cache
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness\Fitness\obj\Debug\Fitness.UserMenu.resources
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness\Fitness\obj\Debug\Fitness.Properties.Resources.resources
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness\Fitness\obj\Debug\Fitness.csproj.GenerateResource.cache
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness\Fitness\obj\Debug\Fitness.csproj.CoreCompileInputs.cache
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness\Fitness\obj\Debug\Fitness.exe
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness\Fitness\obj\Debug\Fitness.pdb
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness\Fitness\obj\Debug\Fitness.Reception.resources
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness\Fitness\obj\Debug\Fitness.Admin.resources
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness\Fitness\bin\Debug\EntityFramework.dll
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness\Fitness\bin\Debug\EntityFramework.SqlServer.dll
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness\Fitness\bin\Debug\EntityFramework.xml
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness\Fitness\bin\Debug\EntityFramework.SqlServer.xml
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness\Fitness\obj\Debug\Fitness.csproj.CopyComplete
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness\Fitness\obj\Debug\Fitness.Confirmation.resources
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness\Fitness\obj\Debug\Fitness.Employees.resources
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness\Fitness\obj\Debug\Fitness.Customers.resources
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness\Fitness\obj\Debug\Fitness.Positions.resources
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness\Fitness\obj\Debug\Fitness.Services.resources
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness\Fitness\obj\Debug\Fitness.Times.resources
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness\Fitness\obj\Debug\Fitness.Packages.resources
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness\Fitness\obj\Debug\Fitness.EmployeesEdit.resources
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness - Copy\Fitness\bin\Debug\Fitness.exe.config
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness - Copy\Fitness\bin\Debug\Fitness.exe
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness - Copy\Fitness\bin\Debug\Fitness.pdb
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness - Copy\Fitness\bin\Debug\EntityFramework.dll
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness - Copy\Fitness\bin\Debug\EntityFramework.SqlServer.dll
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness - Copy\Fitness\bin\Debug\EntityFramework.xml
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness - Copy\Fitness\bin\Debug\EntityFramework.SqlServer.xml
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness - Copy\Fitness\obj\Debug\Fitness.csprojAssemblyReference.cache
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness - Copy\Fitness\obj\Debug\Fitness.Admin.resources
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness - Copy\Fitness\obj\Debug\Fitness.Confirmation.resources
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness - Copy\Fitness\obj\Debug\Fitness.Customers.resources
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness - Copy\Fitness\obj\Debug\Fitness.Employees.resources
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness - Copy\Fitness\obj\Debug\Fitness.Packages.resources
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness - Copy\Fitness\obj\Debug\Fitness.Positions.resources
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness - Copy\Fitness\obj\Debug\Fitness.Reception.resources
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness - Copy\Fitness\obj\Debug\Fitness.EmployeesEdit.resources
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness - Copy\Fitness\obj\Debug\Fitness.Services.resources
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness - Copy\Fitness\obj\Debug\Fitness.Times.resources
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness - Copy\Fitness\obj\Debug\Fitness.UserMenu.resources
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness - Copy\Fitness\obj\Debug\Fitness.Properties.Resources.resources
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness - Copy\Fitness\obj\Debug\Fitness.csproj.GenerateResource.cache
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness - Copy\Fitness\obj\Debug\Fitness.csproj.CoreCompileInputs.cache
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness - Copy\Fitness\obj\Debug\Fitness.csproj.CopyComplete
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness - Copy\Fitness\obj\Debug\Fitness.exe
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness - Copy\Fitness\obj\Debug\Fitness.pdb
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness\Fitness\obj\Debug\Fitness.OrderDetailsPage.resources
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness\Fitness\obj\Debug\Fitness.OrderPage.resources
+D:\Programming\Other\C#\26.06.2019(Winform-FINAL Project)\Fitness\Fitness\obj\Debug\Fitness.OrderDetailsList.resources

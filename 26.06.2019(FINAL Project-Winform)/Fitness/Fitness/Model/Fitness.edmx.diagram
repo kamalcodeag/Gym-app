@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="eb5fbd664add40908c034b5169d57c78" Name="Diagram1">
+        <EntityTypeShape EntityType="FitnessModel.Customer" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FitnessModel.Employee" Width="1.5" PointX="0.75" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FitnessModel.Income" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FitnessModel.OrderDetail" Width="1.5" PointX="5.25" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FitnessModel.Order" Width="1.5" PointX="3" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="FitnessModel.Outcome" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FitnessModel.Package" Width="1.5" PointX="3" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FitnessModel.Position" Width="1.5" PointX="1.5" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FitnessModel.Service" Width="1.5" PointX="3" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FitnessModel.ServicesToPackage" Width="1.5" PointX="5.25" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FitnessModel.Time" Width="1.5" PointX="0.75" PointY="4.375" IsExpanded="true" />
+        <AssociationConnector Association="FitnessModel.FK__Orders__Customer__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="FitnessModel.FK__Employees__Posit__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="FitnessModel.FK__Orders__Employee__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="FitnessModel.FK__OrderDeta__Order__5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="FitnessModel.FK__OrderDeta__Packa__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="FitnessModel.FK__OrderDeta__Servi__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="FitnessModel.FK__Packages__TimeId__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="FitnessModel.FK__ServicesT__Packa__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="FitnessModel.FK__Services__TimeId__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="FitnessModel.FK__ServicesT__Servi__403A8C7D" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

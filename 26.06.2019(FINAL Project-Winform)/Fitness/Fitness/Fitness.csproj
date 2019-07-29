@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{533D4753-8C14-472B-82B7-A5886541EE01}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Fitness</RootNamespace>
+    <AssemblyName>Fitness</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Confirmation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Confirmation.Designer.cs">
+      <DependentUpon>Confirmation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers.Designer.cs">
+      <DependentUpon>Customers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees.Designer.cs">
+      <DependentUpon>Employees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hash.cs" />
+    <Compile Include="Model\Customer.cs">
+      <DependentUpon>Fitness.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Employee.cs">
+      <DependentUpon>Fitness.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Fitness.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Fitness.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Fitness.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Fitness.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Fitness.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Fitness.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Income.cs">
+      <DependentUpon>Fitness.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Order.cs">
+      <DependentUpon>Fitness.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\OrderDetail.cs">
+      <DependentUpon>Fitness.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Outcome.cs">
+      <DependentUpon>Fitness.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Package.cs">
+      <DependentUpon>Fitness.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\partials.cs" />
+    <Compile Include="Model\Position.cs">
+      <DependentUpon>Fitness.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Service.cs">
+      <DependentUpon>Fitness.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ServicesToPackage.cs">
+      <DependentUpon>Fitness.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Time.cs">
+      <DependentUpon>Fitness.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderDetailsPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderDetailsPage.Designer.cs">
+      <DependentUpon>OrderDetailsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderDetailsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderDetailsList.Designer.cs">
+      <DependentUpon>OrderDetailsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderPage.Designer.cs">
+      <DependentUpon>OrderPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Packages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Packages.Designer.cs">
+      <DependentUpon>Packages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Positions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Positions.Designer.cs">
+      <DependentUpon>Positions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reception.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reception.Designer.cs">
+      <DependentUpon>Reception.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeesEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeesEdit.Designer.cs">
+      <DependentUpon>EmployeesEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Services.Designer.cs">
+      <DependentUpon>Services.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Times.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Times.Designer.cs">
+      <DependentUpon>Times.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserMenu.Designer.cs">
+      <DependentUpon>UserMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Confirmation.resx">
+      <DependentUpon>Confirmation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers.resx">
+      <DependentUpon>Customers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees.resx">
+      <DependentUpon>Employees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderDetailsPage.resx">
+      <DependentUpon>OrderDetailsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderDetailsList.resx">
+      <DependentUpon>OrderDetailsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderPage.resx">
+      <DependentUpon>OrderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Packages.resx">
+      <DependentUpon>Packages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Positions.resx">
+      <DependentUpon>Positions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reception.resx">
+      <DependentUpon>Reception.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeesEdit.resx">
+      <DependentUpon>EmployeesEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services.resx">
+      <DependentUpon>Services.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Times.resx">
+      <DependentUpon>Times.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserMenu.resx">
+      <DependentUpon>UserMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EntityDeploy Include="Model\Fitness.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Fitness.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\Fitness.edmx.diagram">
+      <DependentUpon>Fitness.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model\Fitness.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Fitness.edmx</DependentUpon>
+      <LastGenOutput>Fitness.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\Fitness.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Fitness.edmx</DependentUpon>
+      <LastGenOutput>Fitness.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

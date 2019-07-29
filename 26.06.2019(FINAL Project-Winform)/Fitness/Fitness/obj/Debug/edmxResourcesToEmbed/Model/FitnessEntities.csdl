@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FitnessModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Card">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Customers" Relationship="Self.FK__Customers__CardI__45F365D3" FromRole="Cards" ToRole="Customers" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Surname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CardId" Type="Int32" />
+    <NavigationProperty Name="Card" Relationship="Self.FK__Customers__CardI__45F365D3" FromRole="Customers" ToRole="Cards" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__Customer__5070F446" FromRole="Customers" ToRole="Orders" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Surname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PositionId" Type="Int32" />
+    <Property Name="HasVerified" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Position" Relationship="Self.FK__Employees__Posit__4CA06362" FromRole="Employees" ToRole="Positions" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__Employee__4F7CD00D" FromRole="Employees" ToRole="Orders" />
+  </EntityType>
+  <EntityType Name="Income">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Income1" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OrderDetail">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ServiceId" Type="Int32" />
+    <Property Name="PackageId" Type="Int32" />
+    <Property Name="OrderId" Type="Int32" />
+    <NavigationProperty Name="Order" Relationship="Self.FK__OrderDeta__Order__5535A963" FromRole="OrderDetails" ToRole="Orders" />
+    <NavigationProperty Name="Package" Relationship="Self.FK__OrderDeta__Packa__5441852A" FromRole="OrderDetails" ToRole="Packages" />
+    <NavigationProperty Name="Service" Relationship="Self.FK__OrderDeta__Servi__534D60F1" FromRole="OrderDetails" ToRole="Services" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeId" Type="Int32" />
+    <Property Name="CustomerId" Type="Int32" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Price" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <NavigationProperty Name="Customer" Relationship="Self.FK__Orders__Customer__5070F446" FromRole="Orders" ToRole="Customers" />
+    <NavigationProperty Name="Employee" Relationship="Self.FK__Orders__Employee__4F7CD00D" FromRole="Orders" ToRole="Employees" />
+    <NavigationProperty Name="OrderDetails" Relationship="Self.FK__OrderDeta__Order__5535A963" FromRole="Orders" ToRole="OrderDetails" />
+  </EntityType>
+  <EntityType Name="Outcome">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Outcome1" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Package">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TimeId" Type="Int32" />
+    <Property Name="Price__per_month_" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <NavigationProperty Name="OrderDetails" Relationship="Self.FK__OrderDeta__Packa__5441852A" FromRole="Packages" ToRole="OrderDetails" />
+    <NavigationProperty Name="Time" Relationship="Self.FK__Packages__TimeId__3D5E1FD2" FromRole="Packages" ToRole="Times" />
+    <NavigationProperty Name="ServicesToPackages" Relationship="Self.FK__ServicesT__Packa__412EB0B6" FromRole="Packages" ToRole="ServicesToPackages" />
+  </EntityType>
+  <EntityType Name="Position">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Employees" Relationship="Self.FK__Employees__Posit__4CA06362" FromRole="Positions" ToRole="Employees" />
+  </EntityType>
+  <EntityType Name="Service">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Price__per_hour_" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TimeId" Type="Int32" />
+    <NavigationProperty Name="OrderDetails" Relationship="Self.FK__OrderDeta__Servi__534D60F1" FromRole="Services" ToRole="OrderDetails" />
+    <NavigationProperty Name="Time" Relationship="Self.FK__Services__TimeId__3A81B327" FromRole="Services" ToRole="Times" />
+    <NavigationProperty Name="ServicesToPackages" Relationship="Self.FK__ServicesT__Servi__403A8C7D" FromRole="Services" ToRole="ServicesToPackages" />
+  </EntityType>
+  <EntityType Name="ServicesToPackage">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ServiceId" Type="Int32" />
+    <Property Name="PackageId" Type="Int32" />
+    <NavigationProperty Name="Package" Relationship="Self.FK__ServicesT__Packa__412EB0B6" FromRole="ServicesToPackages" ToRole="Packages" />
+    <NavigationProperty Name="Service" Relationship="Self.FK__ServicesT__Servi__403A8C7D" FromRole="ServicesToPackages" ToRole="Services" />
+  </EntityType>
+  <EntityType Name="Time">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Hours" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Packages" Relationship="Self.FK__Packages__TimeId__3D5E1FD2" FromRole="Times" ToRole="Packages" />
+    <NavigationProperty Name="Services" Relationship="Self.FK__Services__TimeId__3A81B327" FromRole="Times" ToRole="Services" />
+  </EntityType>
+  <Association Name="FK__Customers__CardI__45F365D3">
+    <End Role="Cards" Type="Self.Card" Multiplicity="0..1" />
+    <End Role="Customers" Type="Self.Customer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cards">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Customers">
+        <PropertyRef Name="CardId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Orders__Customer__5070F446">
+    <End Role="Customers" Type="Self.Customer" Multiplicity="0..1" />
+    <End Role="Orders" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employees__Posit__4CA06362">
+    <End Role="Positions" Type="Self.Position" Multiplicity="0..1" />
+    <End Role="Employees" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Positions">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Employees">
+        <PropertyRef Name="PositionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Orders__Employee__4F7CD00D">
+    <End Role="Employees" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="Orders" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrderDeta__Order__5535A963">
+    <End Role="Orders" Type="Self.Order" Multiplicity="0..1" />
+    <End Role="OrderDetails" Type="Self.OrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Orders">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="OrderDetails">
+        <PropertyRef Name="OrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrderDeta__Packa__5441852A">
+    <End Role="Packages" Type="Self.Package" Multiplicity="0..1" />
+    <End Role="OrderDetails" Type="Self.OrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Packages">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="OrderDetails">
+        <PropertyRef Name="PackageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrderDeta__Servi__534D60F1">
+    <End Role="Services" Type="Self.Service" Multiplicity="0..1" />
+    <End Role="OrderDetails" Type="Self.OrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Services">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="OrderDetails">
+        <PropertyRef Name="ServiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Packages__TimeId__3D5E1FD2">
+    <End Role="Times" Type="Self.Time" Multiplicity="0..1" />
+    <End Role="Packages" Type="Self.Package" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Times">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Packages">
+        <PropertyRef Name="TimeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ServicesT__Packa__412EB0B6">
+    <End Role="Packages" Type="Self.Package" Multiplicity="0..1" />
+    <End Role="ServicesToPackages" Type="Self.ServicesToPackage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Packages">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ServicesToPackages">
+        <PropertyRef Name="PackageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Services__TimeId__3A81B327">
+    <End Role="Times" Type="Self.Time" Multiplicity="0..1" />
+    <End Role="Services" Type="Self.Service" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Times">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Services">
+        <PropertyRef Name="TimeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ServicesT__Servi__403A8C7D">
+    <End Role="Services" Type="Self.Service" Multiplicity="0..1" />
+    <End Role="ServicesToPackages" Type="Self.ServicesToPackage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Services">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ServicesToPackages">
+        <PropertyRef Name="ServiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="FitnessEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Cards" EntityType="Self.Card" />
+    <EntitySet Name="Customers" EntityType="Self.Customer" />
+    <EntitySet Name="Employees" EntityType="Self.Employee" />
+    <EntitySet Name="Incomes" EntityType="Self.Income" />
+    <EntitySet Name="OrderDetails" EntityType="Self.OrderDetail" />
+    <EntitySet Name="Orders" EntityType="Self.Order" />
+    <EntitySet Name="Outcomes" EntityType="Self.Outcome" />
+    <EntitySet Name="Packages" EntityType="Self.Package" />
+    <EntitySet Name="Positions" EntityType="Self.Position" />
+    <EntitySet Name="Services" EntityType="Self.Service" />
+    <EntitySet Name="ServicesToPackages" EntityType="Self.ServicesToPackage" />
+    <EntitySet Name="Times" EntityType="Self.Time" />
+    <AssociationSet Name="FK__Customers__CardI__45F365D3" Association="Self.FK__Customers__CardI__45F365D3">
+      <End Role="Cards" EntitySet="Cards" />
+      <End Role="Customers" EntitySet="Customers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Orders__Customer__5070F446" Association="Self.FK__Orders__Customer__5070F446">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employees__Posit__4CA06362" Association="Self.FK__Employees__Posit__4CA06362">
+      <End Role="Positions" EntitySet="Positions" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Orders__Employee__4F7CD00D" Association="Self.FK__Orders__Employee__4F7CD00D">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrderDeta__Order__5535A963" Association="Self.FK__OrderDeta__Order__5535A963">
+      <End Role="Orders" EntitySet="Orders" />
+      <End Role="OrderDetails" EntitySet="OrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrderDeta__Packa__5441852A" Association="Self.FK__OrderDeta__Packa__5441852A">
+      <End Role="Packages" EntitySet="Packages" />
+      <End Role="OrderDetails" EntitySet="OrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrderDeta__Servi__534D60F1" Association="Self.FK__OrderDeta__Servi__534D60F1">
+      <End Role="Services" EntitySet="Services" />
+      <End Role="OrderDetails" EntitySet="OrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Packages__TimeId__3D5E1FD2" Association="Self.FK__Packages__TimeId__3D5E1FD2">
+      <End Role="Times" EntitySet="Times" />
+      <End Role="Packages" EntitySet="Packages" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ServicesT__Packa__412EB0B6" Association="Self.FK__ServicesT__Packa__412EB0B6">
+      <End Role="Packages" EntitySet="Packages" />
+      <End Role="ServicesToPackages" EntitySet="ServicesToPackages" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Services__TimeId__3A81B327" Association="Self.FK__Services__TimeId__3A81B327">
+      <End Role="Times" EntitySet="Times" />
+      <End Role="Services" EntitySet="Services" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ServicesT__Servi__403A8C7D" Association="Self.FK__ServicesT__Servi__403A8C7D">
+      <End Role="Services" EntitySet="Services" />
+      <End Role="ServicesToPackages" EntitySet="ServicesToPackages" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
